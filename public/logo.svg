@@ -1,0 +1,8 @@
+<svg viewBox="0 0 200 200" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="100,10 160,50 160,130 100,170 40,130 40,50" fill="#BFD8D2"/>
+  <polygon points="100,10 160,50 100,90 40,50" fill="#F7F7FF"/>
+  <polygon points="100,90 160,130 100,170 40,130" fill="#FFD3B5"/>
+  <text x="100" y="125" text-anchor="middle"
+        font-family="'Orbitron', sans-serif"
+        font-size="80" fill="black">K</text>
+</svg>
