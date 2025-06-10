@@ -28,7 +28,7 @@ const projects = [
       "Welcome to my dynamic portfolio website — thoughtfully designed to reflect both creativity and professionalism. With support for light and dark modes, the experience is as adaptable as it is elegant.",
     image: "/projects/KavyaJain-Portfolio.png",
     tags: ["React", "TailwindCss", "JavaScript", "HTML", "CSS"],
-    demoUrl: "#",
+    demoUrl: "kavya-jain-portfolio.vercel.app",
     githubUrl: "https://github.com/Kavya-Jain-coder/kavya-jain-portfolio.git",
   },
   {
