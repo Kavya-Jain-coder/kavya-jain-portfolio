@@ -29,7 +29,7 @@ const projects = [
     image: "/projects/KavyaJain-Portfolio.png",
     tags: ["React", "TailwindCss", "JavaScript", "HTML", "CSS"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Kavya-Jain-coder/kavya-jain-portfolio.git",
   },
   {
     id: 4,
