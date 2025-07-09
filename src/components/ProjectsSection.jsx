@@ -48,8 +48,8 @@ const projects = [
       "Whether you're hunting for your next movie night pick or just browsing what’s hot, PopcornPilot makes it effortless. Instantly view the Top 5 trending movies based on what's buzzing right now, and explore a massive library of thousands of titles using our smart and lightning-fast search feature.",
     image: "/projects/popcorn-pilot.png",
     tags: ["React", "TailwindCss", "JavaScript", "HTML", "CSS"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://popcorn-pilot.netlify.app",
+    githubUrl: "https://github.com/Kavya-Jain-coder/PopcornPilot.git",
   },
   {
     id: 6,
@@ -79,9 +79,9 @@ export const ProjectsSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project, id) => (
             <div
-              key={key}
+              key={id}
               className="group bg-card rounded-lg shadow-xs overflow-hidden card-hover"
             >
               <div className="h-48 overflow-hidden">
@@ -96,7 +96,7 @@ export const ProjectsSection = () => {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
-                      key={key}
+                      key={id}
                       className="px-2 py-1 font-medium rounded-full bg-primary border text-primary-foreground text-xs"
                     >
                       {tag}
