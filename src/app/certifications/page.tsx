@@ -15,15 +15,17 @@ const fadeInUp = {
 
 export default function CertificationsPage() {
   return (
-    <main className="min-h-screen relative overflow-hidden bg-base-dark flex items-center justify-center pt-24 pb-12">
+    <main className="h-[100dvh] relative overflow-hidden bg-base-dark flex flex-col">
       {/* Background Image */}
       <div
         className="scene-bg"
         style={{ backgroundImage: 'url(/bg/certs.webp)' }}
       />
 
-      <div className="w-full max-w-5xl mx-auto z-10 px-6 flex flex-col items-center justify-center">
-        {/* Left Side: Badges */}
+      {/* Internal Scrolling Container */}
+      <div className="flex-1 overflow-y-auto custom-scrollbar w-full relative z-10 pt-24 pb-12 flex flex-col">
+        <div className="w-full max-w-5xl mx-auto px-6 flex-1 flex flex-col justify-center items-center">
+          {/* Left Side: Badges */}
         <div className="w-full space-y-8">
           <motion.div initial="hidden" animate="visible" className="space-y-4">
             <motion.p custom={0} variants={fadeInUp} className="section-eyebrow">
@@ -40,7 +42,7 @@ export default function CertificationsPage() {
             <motion.div
               custom={2}
               variants={fadeInUp}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               <CertBadge
                 title="GDG UI/UX Workshop"
@@ -66,6 +68,7 @@ export default function CertificationsPage() {
               </NeonButton>
             </motion.div>
           </motion.div>
+        </div>
         </div>
       </div>
     </main>

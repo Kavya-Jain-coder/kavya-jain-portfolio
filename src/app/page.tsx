@@ -18,15 +18,17 @@ export default function HomePage() {
   }
 
   return (
-    <main className="min-h-screen relative overflow-hidden bg-base-dark flex items-center justify-center pt-20 lg:pt-0">
+    <main className="h-[100dvh] relative overflow-hidden bg-base-dark flex flex-col">
       {/* Background Image Layer */}
       <div
         className="scene-bg"
         style={{ backgroundImage: 'url(/bg/hero.webp)' }}
       />
 
-      <div className="w-full max-w-7xl mx-auto z-10 px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        {/* Left text column */}
+      {/* Internal Scrolling Container */}
+      <div className="flex-1 overflow-y-auto custom-scrollbar w-full relative z-10 pt-20 lg:pt-0 flex flex-col">
+        <div className="w-full max-w-7xl mx-auto px-6 py-12 flex-1 flex flex-col lg:grid lg:grid-cols-12 gap-10 items-center justify-center">
+          {/* Left text column */}
         <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -101,6 +103,7 @@ export default function HomePage() {
         >
           <CyberHead />
         </motion.div>
+      </div>
       </div>
     </main>
   );

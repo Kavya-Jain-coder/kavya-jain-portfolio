@@ -67,14 +67,16 @@ const staggerItem = {
 
 export default function SkillsPage() {
   return (
-    <main className="min-h-screen relative overflow-hidden bg-base-dark flex items-center justify-center pt-24 pb-12">
+    <main className="h-[100dvh] relative overflow-hidden bg-base-dark flex flex-col">
       {/* Background Image */}
       <div
         className="scene-bg"
         style={{ backgroundImage: 'url(/bg/skills.webp)' }}
       />
 
-      <div className="w-full max-w-5xl mx-auto z-10 px-6 flex flex-col items-center justify-center">
+      {/* Internal Scrolling Container */}
+      <div className="flex-1 overflow-y-auto custom-scrollbar w-full relative z-10 pt-24 pb-12 flex flex-col">
+        <div className="w-full max-w-5xl mx-auto px-6 flex-1 flex flex-col justify-center items-center">
         {/* Left Side: Skills lists */}
         <div className="w-full space-y-8">
           <motion.div initial="hidden" animate="visible" className="space-y-4">
@@ -93,7 +95,7 @@ export default function SkillsPage() {
               variants={staggerContainer}
               initial="hidden"
               animate="visible"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[50vh] overflow-y-auto pr-2 custom-scrollbar"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
             >
               {skillCategories.map((cat) => (
                 <motion.div key={cat.name} variants={staggerItem}>
@@ -120,6 +122,7 @@ export default function SkillsPage() {
               </NeonButton>
             </motion.div>
           </motion.div>
+        </div>
         </div>
       </div>
     </main>

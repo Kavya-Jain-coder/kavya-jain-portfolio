@@ -16,15 +16,17 @@ const fadeInUp = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen relative overflow-hidden bg-base-dark flex items-center justify-center pt-24 pb-12">
+    <main className="h-[100dvh] relative overflow-hidden bg-base-dark flex flex-col">
       {/* Background Image */}
       <div
         className="scene-bg"
         style={{ backgroundImage: 'url(/bg/about.webp)' }}
       />
 
-      <div className="w-full max-w-5xl mx-auto z-10 px-6 flex flex-col items-center justify-center">
-        {/* Left Bio Column */}
+      {/* Internal Scrolling Container */}
+      <div className="flex-1 overflow-y-auto custom-scrollbar w-full relative z-10 pt-24 pb-12 flex flex-col">
+        <div className="w-full max-w-5xl mx-auto px-6 flex-1 flex flex-col justify-center items-center">
+          {/* Left Bio Column */}
         <div className="w-full space-y-8">
           <motion.div
             initial="hidden"
@@ -97,6 +99,7 @@ export default function AboutPage() {
               </NeonButton>
             </motion.div>
           </motion.div>
+        </div>
         </div>
       </div>
     </main>

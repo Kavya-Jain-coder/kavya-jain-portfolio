@@ -47,14 +47,16 @@ const fadeInUp = {
 
 export default function EducationPage() {
   return (
-    <main className="min-h-screen relative overflow-hidden bg-base-dark flex items-center justify-center pt-24 pb-12">
+    <main className="h-[100dvh] relative overflow-hidden bg-base-dark flex flex-col">
       {/* Background Image */}
       <div
         className="scene-bg"
         style={{ backgroundImage: 'url(/bg/education.webp)' }}
       />
 
-      <div className="w-full max-w-5xl mx-auto z-10 px-6 flex flex-col items-center justify-center">
+      {/* Internal Scrolling Container */}
+      <div className="flex-1 overflow-y-auto custom-scrollbar w-full relative z-10 pt-24 pb-12 flex flex-col">
+        <div className="w-full max-w-5xl mx-auto px-6 flex-1 flex flex-col justify-center items-center">
         {/* Left Side: Timeline */}
         <div className="w-full space-y-8">
           <motion.div initial="hidden" animate="visible" className="space-y-4">
@@ -72,7 +74,7 @@ export default function EducationPage() {
             <motion.div
               custom={2}
               variants={fadeInUp}
-              className="max-h-[50vh] overflow-y-auto pr-2 custom-scrollbar"
+              className="pr-2"
             >
               <Timeline entries={timelineEntries} />
             </motion.div>
@@ -83,6 +85,7 @@ export default function EducationPage() {
               </NeonButton>
             </motion.div>
           </motion.div>
+        </div>
         </div>
       </div>
     </main>
