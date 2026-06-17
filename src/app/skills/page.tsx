@@ -1,6 +1,5 @@
 'use client';
 
-import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import GlassCard from '@/components/ui/GlassCard';
 import SkillPill from '@/components/ui/SkillPill';

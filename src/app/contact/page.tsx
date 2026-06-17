@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { Mail, Link as LinkIcon, Globe, Swords, Code2 } from 'lucide-react';
 import GlassCard from '@/components/ui/GlassCard';

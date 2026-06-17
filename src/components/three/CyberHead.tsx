@@ -68,7 +68,7 @@ export default function CyberHead() {
           // Instead of replacing the material completely, just ensure it looks good if it has its own.
           // Or if it's missing materials, we can give it a fallback.
           if (Array.isArray(mesh.material)) {
-            mesh.material.forEach((mat: any) => {
+            mesh.material.forEach((mat: THREE.MeshStandardMaterial) => {
               if (mat.name && mat.name.toLowerCase().includes('eye')) {
                 mat.emissive = new THREE.Color(0x00f5ff);
                 mat.emissiveIntensity = 2;
@@ -79,7 +79,7 @@ export default function CyberHead() {
               }
             });
           } else if (mesh.material) {
-            const mat = mesh.material as any;
+            const mat = mesh.material as THREE.MeshStandardMaterial;
             if (mat.name && mat.name.toLowerCase().includes('eye')) {
               mat.emissive = new THREE.Color(0x00f5ff);
               mat.emissiveIntensity = 2;

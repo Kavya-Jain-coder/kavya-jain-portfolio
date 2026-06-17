@@ -1,6 +1,5 @@
 'use client';
 
-import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import Timeline from '@/components/ui/Timeline';
 import NeonButton from '@/components/ui/NeonButton';
