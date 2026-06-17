@@ -85,7 +85,7 @@ export default function HomePage() {
             className="pt-4 flex flex-wrap gap-4"
           >
             <NeonButton href="/about" variant="cyan">
-              VIEW PROJECTS →
+              About Me →
             </NeonButton>
             <NeonButton href="/AI-Resume-Kavya_Jain.pdf" variant="purple" download>
               DOWNLOAD RESUME
