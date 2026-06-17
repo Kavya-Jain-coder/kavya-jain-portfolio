@@ -25,9 +25,9 @@ export default function HomePage() {
         style={{ backgroundImage: 'url(/bg/hero.webp)' }}
       />
 
-      {/* Internal Scrolling Container */}
-      <div className="flex-1 overflow-y-auto custom-scrollbar w-full relative z-10 pt-20 lg:pt-0 flex flex-col">
-        <div className="w-full max-w-7xl mx-auto px-6 py-12 flex-1 flex flex-col lg:grid lg:grid-cols-12 gap-10 items-center justify-center">
+      {/* Internal Non-Scrolling Container */}
+      <div className="flex-1 overflow-hidden w-full relative z-10 pt-16 lg:pt-0 flex flex-col">
+        <div className="w-full max-w-7xl mx-auto px-6 py-6 lg:py-12 flex-1 flex flex-col lg:grid lg:grid-cols-12 gap-4 lg:gap-10 items-center justify-center">
           {/* Left text column */}
         <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
           <motion.p
@@ -99,7 +99,7 @@ export default function HomePage() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 1.0, ease: 'easeOut' }}
-          className="lg:col-span-5 w-full flex justify-center items-center h-[350px] md:h-[480px] relative lg:mt-24"
+          className="lg:col-span-5 w-full flex justify-center items-center flex-1 min-h-[200px] lg:h-[480px] lg:flex-none relative lg:mt-24"
         >
           <CyberHead />
         </motion.div>
