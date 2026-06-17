@@ -7,7 +7,7 @@
 Welcome to the source code for my personal portfolio! This is a highly interactive, 3D-integrated, cyberpunk-themed portfolio built to showcase my expertise in Generative AI pipelines, modern web development, and immersive UI/UX design.
 
 ## 🌐 Live URL
-[kavyajain.vercel.app](https://kavyajain.vercel.app/) *(Replace with your actual link if different)*
+[kavyajain.vercel.app]([https://kavya-jain-portfolio.vercel.app]) *(Replace with your actual link if different)*
 
 ---
 
