@@ -11,6 +11,7 @@ interface NeonButtonProps {
   type?: 'button' | 'submit';
   disabled?: boolean;
   download?: boolean;
+  ariaLabel?: string;
 }
 
 const variantStyles = {
@@ -40,6 +41,7 @@ export default function NeonButton({
   type = 'button',
   disabled = false,
   download = false,
+  ariaLabel,
 }: NeonButtonProps) {
   const style = variantStyles[variant];
 
@@ -59,6 +61,7 @@ export default function NeonButton({
         <a
           href={href}
           download
+          aria-label={ariaLabel}
           className={baseClasses}
           data-hover
           style={{
@@ -79,6 +82,7 @@ export default function NeonButton({
     return (
       <Link
         href={href}
+        aria-label={ariaLabel}
         className={baseClasses}
         data-hover
         style={{
@@ -102,6 +106,7 @@ export default function NeonButton({
       type={type}
       onClick={onClick}
       disabled={disabled}
+      aria-label={ariaLabel}
       className={baseClasses}
       data-hover
       style={{

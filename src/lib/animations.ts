@@ -3,6 +3,11 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
+export const prefersReducedMotion = () => {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+};
+
 export function useGsapFadeIn() {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -13,10 +18,11 @@ export function useGsapFadeIn() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          const isReduced = prefersReducedMotion();
           gsap.fromTo(
             el.children,
-            { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' }
+            { opacity: 0, y: isReduced ? 0 : 40 },
+            { opacity: 1, y: 0, duration: isReduced ? 0 : 0.8, stagger: isReduced ? 0 : 0.15, ease: 'power3.out' }
           );
           observer.unobserve(el);
         }
@@ -49,9 +55,10 @@ export function useCountUp(
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
           const obj = { val: 0 };
+          const isReduced = prefersReducedMotion();
           gsap.to(obj, {
             val: end,
-            duration,
+            duration: isReduced ? 0 : duration,
             ease: 'power2.out',
             onUpdate: () => {
               el.textContent = obj.val.toFixed(decimals) + suffix;

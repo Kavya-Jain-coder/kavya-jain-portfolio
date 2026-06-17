@@ -2,7 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 
 export default function CyberHead() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -58,10 +59,16 @@ export default function CyberHead() {
     const eyesTexture = textureLoader.load('/ai-robot/textures/eyesTexture.png');
     eyesTexture.colorSpace = THREE.SRGBColorSpace;
 
-    const fbxLoader = new FBXLoader();
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath('/draco/');
+
+    const gltfLoader = new GLTFLoader();
+    gltfLoader.setDRACOLoader(dracoLoader);
+
     let robotModel: THREE.Group | null = null;
     
-    fbxLoader.load('/ai-robot/source/Robot/Robot.fbx', (object) => {
+    gltfLoader.load('/ai-robot/source/Robot.glb', (gltf) => {
+      const object = gltf.scene;
       object.traverse((child) => {
         if ((child as THREE.Mesh).isMesh) {
           const mesh = child as THREE.Mesh;
@@ -121,6 +128,10 @@ export default function CyberHead() {
     observer.observe(container);
 
     const clock = new THREE.Clock();
+    
+    // Check for reduced motion preference
+    const prefersReducedMotion = typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
+
     const animate = () => {
       requestAnimationFrame(animate);
       if (!isVisible.current) return;
@@ -131,16 +142,18 @@ export default function CyberHead() {
       mouse.x += (mouse.targetX - mouse.x) * 0.08;
       mouse.y += (mouse.targetY - mouse.y) * 0.08;
 
-      // 1. Head rotation (clamped for realism so it doesn't spin wildly)
-      // Restrict X rotation (forward/backward) so the robot doesn't lean back too far
-      const targetRotY = Math.max(-0.6, Math.min(0.6, mouse.x * 0.6)); 
-      const targetRotX = Math.max(-0.1, Math.min(0.2, -mouse.y * 0.2));
+      if (!prefersReducedMotion) {
+        // 1. Head rotation (clamped for realism so it doesn't spin wildly)
+        // Restrict X rotation (forward/backward) so the robot doesn't lean back too far
+        const targetRotY = Math.max(-0.6, Math.min(0.6, mouse.x * 0.6)); 
+        const targetRotX = Math.max(-0.1, Math.min(0.2, -mouse.y * 0.2));
 
-      headGroup.rotation.y = targetRotY;
-      headGroup.rotation.x = targetRotX;
+        headGroup.rotation.y = targetRotY;
+        headGroup.rotation.x = targetRotX;
 
-      // 2. Head subtle breathing
-      headGroup.position.y = Math.sin(t * 1.5) * 0.04;
+        // 2. Head subtle breathing
+        headGroup.position.y = Math.sin(t * 1.5) * 0.04;
+      }
 
       renderer.render(scene, camera);
     };

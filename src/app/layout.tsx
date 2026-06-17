@@ -23,6 +23,11 @@ export const metadata: Metadata = {
       "Enter the world of AI through an immersive cinematic portfolio experience.",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kavya Jain — GenAI Engineer & Full-Stack Builder",
+    description: "Enter the world of AI through an immersive cinematic portfolio experience.",
+  },
 };
 
 import Navbar from "@/components/ui/Navbar";

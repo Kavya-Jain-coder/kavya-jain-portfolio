@@ -22,11 +22,12 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none">
+    <nav aria-label="Main Navigation" className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none">
       <div className="max-w-5xl mx-auto glass rounded-full border border-white/10 backdrop-blur-md px-6 py-3 flex items-center justify-between shadow-xl shadow-black/50 pointer-events-auto">
         {/* Logo */}
         <Link
           href="/"
+          aria-label="Homepage"
           className="group flex items-center gap-2 font-orbitron font-black tracking-widest text-text-primary transition-colors"
         >
           <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-white/5 border border-white/10 group-hover:border-neon-cyan/50 group-hover:shadow-[0_0_15px_rgba(0,245,255,0.4)] transition-all duration-300">
@@ -65,6 +66,8 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
+          aria-label="Toggle mobile menu"
+          aria-expanded={mobileOpen}
           className="lg:hidden text-text-primary p-1.5 focus:outline-none"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
