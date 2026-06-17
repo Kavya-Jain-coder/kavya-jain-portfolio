@@ -23,21 +23,23 @@ export default function SkillPill({ name, color }: SkillPillProps) {
       className="skill-pill"
       style={{
         color: c,
-        borderColor: `${c}50`,
-        background: `${c}15`,
+        borderColor: `${c}60`,
+        background: `rgba(0, 0, 0, 0.5)`,
+        backdropFilter: 'blur(4px)',
+        WebkitBackdropFilter: 'blur(4px)',
         textShadow: `0 0 8px ${c}50`,
       }}
       onMouseEnter={(e) => {
         const el = e.target as HTMLElement;
         el.style.boxShadow = `0 0 20px ${c}60`;
         el.style.borderColor = `${c}a0`;
-        el.style.background = `${c}25`;
+        el.style.background = `rgba(0, 0, 0, 0.8)`;
       }}
       onMouseLeave={(e) => {
         const el = e.target as HTMLElement;
         el.style.boxShadow = `none`;
-        el.style.borderColor = `${c}50`;
-        el.style.background = `${c}15`;
+        el.style.borderColor = `${c}60`;
+        el.style.background = `rgba(0, 0, 0, 0.5)`;
       }}
       data-hover
     >
