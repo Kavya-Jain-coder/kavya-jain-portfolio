@@ -84,7 +84,7 @@ export default function HomePage() {
             transition={{ delay: 0.8, duration: 0.5 }}
             className="pt-4 flex flex-wrap gap-4"
           >
-            <NeonButton href="/projects" variant="cyan">
+            <NeonButton href="/about" variant="cyan">
               VIEW PROJECTS →
             </NeonButton>
             <NeonButton href="/AI-Resume-Kavya_Jain.pdf" variant="purple" download>

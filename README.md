@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./src/app/icon.png" width="150" alt="KJ Cyber Logo" />
+</p>
+
 # 🚀 Kavya Jain | GenAI Engineer & Full-Stack Builder
 
 Welcome to the source code for my personal portfolio! This is a highly interactive, 3D-integrated, cyberpunk-themed portfolio built to showcase my expertise in Generative AI pipelines, modern web development, and immersive UI/UX design.
