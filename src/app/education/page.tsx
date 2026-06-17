@@ -14,20 +14,6 @@ const timelineEntries = [
     icon: '🎓',
   },
   {
-    period: '2023 → 2024',
-    title: 'Intermediate — Class XII',
-    institution: 'Rahul Ma Shikshan Sansthan Sr. Secondary School, Jaipur, Rajasthan',
-    grade: '75.6%',
-    icon: '📚',
-  },
-  {
-    period: '2021 → 2022',
-    title: 'Matriculation — Class X',
-    institution: 'Rahul Ma Shikshan Sansthan',
-    grade: '88.0%',
-    icon: '📖',
-  },
-  {
     period: 'Extra-curricular',
     title: 'Inter-School Kho-Kho Championship, Jaipur',
     institution: '🏅 3rd Place',

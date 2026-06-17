@@ -75,7 +75,7 @@ export default function AboutPage() {
             >
               {[
                 { label: 'LeetCode', value: '170+ solved' },
-                { label: 'LC Rating', value: '1394' },
+                { label: 'Projects', value: '10+ Live' },
                 { label: 'GPA', value: '7.65 / 10.0' },
               ].map((stat) => (
                 <GlassCard key={stat.label} className="p-4 text-center border border-white/5" hover>
