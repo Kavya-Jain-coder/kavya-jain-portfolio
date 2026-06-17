@@ -9,32 +9,17 @@ const skillCategories = [
   {
     name: 'AI / ML',
     color: '#00f5ff',
-    skills: ['LangChain', 'LangGraph', 'n8n', 'Google Gemini API', 'Llama 70B', 'Qdrant', 'RAG Pipelines'],
+    skills: ['LangChain', 'Google Gemini API', 'Llama 3', 'Qdrant', 'RAG Pipelines'],
   },
   {
     name: 'Frontend',
     color: '#bf00ff',
-    skills: ['Next.js', 'React.js', 'Three.js', 'Framer Motion', 'GSAP', 'Tailwind CSS', 'HTML', 'CSS'],
+    skills: ['Next.js', 'React.js', 'Three.js', 'Framer Motion', 'Tailwind CSS', 'TypeScript'],
   },
   {
     name: 'Backend',
     color: '#ff6b35',
-    skills: ['Node.js', 'FastAPI', 'Supabase', 'PostgreSQL', 'JWT Auth'],
-  },
-  {
-    name: 'Languages',
-    color: '#00f5ff',
-    skills: ['Python', 'JavaScript', 'TypeScript', 'SQL'],
-  },
-  {
-    name: 'Data',
-    color: '#39ff14',
-    skills: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Tableau', 'Power BI', 'Looker Studio'],
-  },
-  {
-    name: 'Database',
-    color: '#ff6b35',
-    skills: ['MongoDB', 'MySQL'],
+    skills: ['Node.js', 'FastAPI', 'Supabase', 'PostgreSQL', 'Python'],
   },
   {
     name: 'DevOps',
@@ -88,7 +73,7 @@ export default function SkillsPage() {
               variants={fadeInUp}
               className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary"
             >
-              THE CITY OF SKILLS
+              TECHNICAL EXPERTISE
             </motion.h2>
 
             <motion.div

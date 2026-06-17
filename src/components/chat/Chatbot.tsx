@@ -47,8 +47,8 @@ export default function Chatbot({ isOpen, onClose }: ChatbotProps) {
           >
             {/* Background Images */}
             <div 
-              className="absolute inset-0 z-0 bg-cover bg-center"
-              style={{ backgroundImage: 'url(/bg/neon-3d-cybermonday-celebration-template.jpg)' }}
+              className="absolute inset-0 bg-cover bg-center z-0"
+              style={{ backgroundImage: 'url(/bg/chat-bg-primary.jpg)' }}
             />
             
             {/* Dark Overlay for readability without blurring the image */}

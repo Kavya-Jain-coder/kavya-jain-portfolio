@@ -7,7 +7,7 @@ import NeonButton from '@/components/ui/NeonButton';
 const projects = [
   {
     title: 'NEXUS.GG',
-    date: 'June 2026',
+    date: 'Jan 2026 - May 2026',
     type: 'Full-Stack AI Gaming Platform',
     description:
       'AI e-sports companion featuring telemetry analysis, custom checklists, and gamified 3D holographic dashboards for competitive gamers.',
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: 'CORTEX',
-    date: 'June 2026',
+    date: 'Aug 2025 - Dec 2025',
     type: 'AI-Native Learning Workspace',
     description:
       'A full-stack RAG study workspace supporting PDF uploads, study guide generation, KaTeX note-taking, and interactive canvas boards.',
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
         <div className="w-full space-y-8">
           <motion.div initial="hidden" animate="visible" className="space-y-4">
             <motion.p custom={0} variants={fadeInUp} className="section-eyebrow">
-              {'// NEURAL PROJECTS'}
+              {'// FEATURED WORK'}
             </motion.p>
             <motion.h2
               custom={1}

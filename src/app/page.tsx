@@ -37,9 +37,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="section-eyebrow"
-          >
-            WELCOME TO MY WORLD
-          </motion.p>
+            WELCOME
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -55,14 +53,13 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="font-orbitron text-neon-cyan text-lg md:text-xl drop-shadow-[0_0_8px_rgba(0,245,255,0.8)]"
+            className="font-orbitron text-neon-cyan text-lg md:text-xl drop-shadow-[0_0_4px_rgba(0,245,255,0.4)]"
           >
             <TypewriterText
               words={[
                 'GenAI Engineer',
                 'RAG Pipeline Architect',
                 'Full-Stack Builder',
-                'Codeforces 1370',
                 'B.Tech AI Student',
               ]}
               speed={80}
@@ -87,8 +84,8 @@ export default function HomePage() {
             transition={{ delay: 0.8, duration: 0.5 }}
             className="pt-4 flex flex-wrap gap-4"
           >
-            <NeonButton href="/about" variant="cyan">
-              ENTER MY WORLD →
+            <NeonButton href="/projects" variant="cyan">
+              VIEW PROJECTS →
             </NeonButton>
             <NeonButton href="/AI-Resume-Kavya_Jain.pdf" variant="purple" download>
               DOWNLOAD RESUME
