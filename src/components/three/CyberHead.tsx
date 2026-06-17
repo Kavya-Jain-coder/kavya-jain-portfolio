@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
@@ -8,6 +8,7 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 export default function CyberHead() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isVisible = useRef(true);
+  const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -184,7 +185,15 @@ export default function CyberHead() {
   return (
     <div 
       ref={containerRef} 
-      className="w-full h-full min-h-[400px] md:min-h-[600px] cursor-crosshair flex items-center justify-center" 
-    />
+      className="w-full h-full min-h-[400px] md:min-h-[600px] cursor-crosshair flex items-center justify-center relative"
+      onTouchStart={() => setHasInteracted(true)}
+      onMouseDown={() => setHasInteracted(true)}
+    >
+      {!hasInteracted && (
+        <div className="absolute lg:hidden bottom-4 md:bottom-10 flex flex-col items-center animate-bounce pointer-events-none z-10 bg-base-dark/60 px-5 py-2 rounded-full border border-neon-cyan/40 backdrop-blur-md shadow-[0_0_15px_rgba(0,245,255,0.2)]">
+          <span className="text-neon-cyan font-orbitron text-xs tracking-widest uppercase">Tap & Drag</span>
+        </div>
+      )}
+    </div>
   );
 }
