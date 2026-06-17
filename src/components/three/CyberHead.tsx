@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
@@ -12,7 +12,6 @@ interface CyberHeadProps {
 export default function CyberHead({ onRobotClick }: CyberHeadProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const isVisible = useRef(true);
-  const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -190,8 +189,6 @@ export default function CyberHead({ onRobotClick }: CyberHeadProps) {
     <div 
       ref={containerRef} 
       className="w-full h-full min-h-[400px] md:min-h-[600px] cursor-crosshair flex items-center justify-center relative group"
-      onTouchStart={() => setHasInteracted(true)}
-      onMouseDown={() => setHasInteracted(true)}
       onDoubleClick={onRobotClick}
     >
       {/* Speech Bubble */}

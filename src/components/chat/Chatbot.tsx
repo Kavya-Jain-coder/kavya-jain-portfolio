@@ -85,7 +85,7 @@ export default function Chatbot({ isOpen, onClose }: ChatbotProps) {
                     INITIALIZING CONNECTION...
                   </p>
                   <p className="text-xs text-text-primary/70 max-w-[250px]">
-                    Ask me anything about Kavya's projects, skills, or experience.
+                    Ask me anything about Kavya&apos;s projects, skills, or experience.
                   </p>
                 </div>
               )}
