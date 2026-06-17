@@ -28,17 +28,17 @@ const staggerItem = {
 
 export default function FuturePage() {
   return (
-    <main className="min-h-screen relative overflow-hidden bg-base-dark flex items-center justify-center pt-24 pb-12">
+    <main className="h-[100dvh] relative overflow-hidden bg-base-dark flex flex-col pt-24 pb-6">
       {/* Background Image */}
       <div
         className="scene-bg"
         style={{ backgroundImage: 'url(/bg/future.webp)' }}
       />
 
-      <div className="w-full max-w-5xl mx-auto z-10 px-6 flex flex-col items-center justify-center">
+      <div className="w-full max-w-5xl mx-auto z-10 px-6 flex flex-col h-full overflow-hidden">
         {/* Left Side: Plans */}
-        <div className="w-full space-y-8">
-          <motion.div initial="hidden" animate="visible" className="space-y-4">
+        <div className="w-full flex flex-col h-full overflow-hidden">
+          <motion.div initial="hidden" animate="visible" className="space-y-2 mb-6 shrink-0">
             <motion.p custom={0} variants={fadeInUp} className="section-eyebrow">
               {"// WHAT'S NEXT"}
             </motion.p>
@@ -52,13 +52,14 @@ export default function FuturePage() {
             <motion.p custom={2} variants={fadeInUp} className="text-text-primary/50 text-sm">
               The future is always in construction
             </motion.p>
+          </motion.div>
 
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              animate="visible"
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4"
-            >
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 overflow-y-auto pr-2 pb-4 flex-1 min-h-0"
+          >
               {[
                 {
                   title: 'Multi-Agent AI Orchestration System',
@@ -104,7 +105,8 @@ export default function FuturePage() {
               ))}
             </motion.div>
 
-            <motion.div custom={4} variants={fadeInUp} className="pt-2 flex gap-4">
+          <motion.div initial="hidden" animate="visible" className="pt-4 shrink-0 mt-2">
+            <motion.div custom={4} variants={fadeInUp} className="flex gap-4">
               <NeonButton href="/stats" variant="cyan">
                 VIEW MY STATS →
               </NeonButton>
