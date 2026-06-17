@@ -77,8 +77,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-20 left-4 right-4 bg-base-dark/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl transition-all duration-300 pointer-events-auto ${
-          mobileOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
+        className={`lg:hidden absolute top-20 left-4 right-4 bg-base-dark/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl transition-all duration-300 ${
+          mobileOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'
         }`}
       >
         <div className="px-4 py-4 space-y-1.5">
