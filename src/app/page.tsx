@@ -65,15 +65,17 @@ export default function HomePage() {
             />
           </motion.div>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="max-w-xl text-text-primary/70 text-sm md:text-base leading-relaxed"
+            className="max-w-xl p-4 md:p-6 rounded-2xl bg-base-dark/60 backdrop-blur-md border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
           >
-            I am a B.Tech Artificial Intelligence & Machine Learning student at Newton School of Technology. 
-            I build production-grade GenAI pipelines, study workspaces, and immersive telemetry dashboards.
-          </motion.p>
+            <p className="text-text-primary/90 text-sm md:text-base leading-relaxed">
+              I am a B.Tech Artificial Intelligence & Machine Learning student at Newton School of Technology. 
+              I build production-grade GenAI pipelines, study workspaces, and immersive telemetry dashboards.
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
