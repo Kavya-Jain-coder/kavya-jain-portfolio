@@ -16,7 +16,7 @@
   --text-primary: #e0e0ff;
   --glass-bg: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-blur: 20px;
+  --glass-blur: 6px;
 }
 
 * {
@@ -73,10 +73,10 @@ body {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(10, 10, 15, 0.5) 0%,
-    rgba(10, 10, 15, 0.35) 40%,
-    rgba(10, 10, 15, 0.45) 70%,
-    rgba(10, 10, 15, 0.8) 100%
+    rgba(10, 10, 15, 0.2) 0%,
+    rgba(10, 10, 15, 0.1) 40%,
+    rgba(10, 10, 15, 0.15) 70%,
+    rgba(10, 10, 15, 0.6) 100%
   );
   z-index: 1;
 }
