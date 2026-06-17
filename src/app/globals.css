@@ -59,7 +59,7 @@ body {
    ═══════════════════════════════════════════════════════ */
 
 .scene-bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-size: cover;
   background-position: center;
