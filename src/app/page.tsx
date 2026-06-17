@@ -55,7 +55,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="font-orbitron text-neon-purple text-lg"
+            className="font-orbitron text-neon-cyan text-lg md:text-xl drop-shadow-[0_0_8px_rgba(0,245,255,0.8)]"
           >
             <TypewriterText
               words={[

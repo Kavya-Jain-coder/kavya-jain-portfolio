@@ -13,7 +13,7 @@ interface ChatbotProps {
 }
 
 export default function Chatbot({ isOpen, onClose }: ChatbotProps) {
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
+  const { messages, input, handleInputChange, handleSubmit, isLoading, append } = useChat({
     api: '/api/chat',
   });
 
@@ -79,14 +79,31 @@ export default function Chatbot({ isOpen, onClose }: ChatbotProps) {
             {/* Messages Area */}
             <div className="relative z-10 flex-1 overflow-y-auto custom-scrollbar p-4 space-y-4">
               {messages.length === 0 && (
-                <div className="flex flex-col items-center justify-center h-full text-center space-y-3 opacity-70">
+                <div className="flex flex-col items-center justify-center h-full text-center space-y-3 opacity-90 mt-8">
                   <Bot className="w-12 h-12 text-neon-cyan mb-2 opacity-50" />
-                  <p className="font-orbitron text-sm tracking-wide text-text-primary">
+                  <p className="font-orbitron text-sm tracking-wide text-neon-cyan">
                     INITIALIZING CONNECTION...
                   </p>
-                  <p className="text-xs text-text-primary/70 max-w-[250px]">
+                  <p className="text-xs text-text-primary/70 max-w-[250px] mb-4">
                     Ask me anything about Kavya&apos;s projects, skills, or experience.
                   </p>
+                  
+                  <div className="flex flex-col gap-2 w-full max-w-[260px] pt-4">
+                    {[
+                      "What is your origin story?",
+                      "Why should we hire Kavya?",
+                      "What is your tech stack?",
+                      "Tell me about CORTEX."
+                    ].map((q) => (
+                      <button
+                        key={q}
+                        onClick={() => append({ role: 'user', content: q })}
+                        className="text-xs text-left px-4 py-2.5 rounded-xl border border-neon-cyan/30 bg-neon-cyan/10 hover:bg-neon-cyan/20 hover:border-neon-cyan/60 transition-all text-text-primary shadow-[0_0_15px_rgba(0,245,255,0.1)]"
+                      >
+                        {q}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               )}
 
@@ -111,7 +128,7 @@ export default function Chatbot({ isOpen, onClose }: ChatbotProps) {
                     {m.role === 'user' ? (
                       <p>{m.content}</p>
                     ) : (
-                      <div className="prose prose-invert prose-sm max-w-none prose-p:leading-relaxed prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10 prose-ul:list-disc prose-ul:pl-4 prose-li:my-1 prose-h3:font-orbitron prose-h3:text-neon-cyan prose-h3:text-lg prose-h3:mt-5 prose-h3:mb-2 prose-h2:font-orbitron prose-h2:text-neon-cyan prose-h2:text-xl prose-h2:mt-6 prose-h2:mb-3 prose-strong:text-white prose-strong:font-bold text-text-primary/90">
+                      <div className="prose prose-invert prose-sm max-w-none prose-p:leading-relaxed prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10 prose-ul:list-disc prose-ul:pl-4 prose-li:my-1 prose-headings:font-orbitron prose-headings:text-neon-cyan prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-headings:mt-6 prose-headings:mb-3 prose-strong:text-white prose-strong:font-bold text-text-primary/90">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
                           {m.content}
                         </ReactMarkdown>
