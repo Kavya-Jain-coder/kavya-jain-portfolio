@@ -9,9 +9,11 @@ import NeonButton from '@/components/ui/NeonButton';
 
 const CyberHead = dynamic(() => import('@/components/three/CyberHead'), { ssr: false });
 const LoadingScreen = dynamic(() => import('@/components/ui/LoadingScreen'), { ssr: false });
+const Chatbot = dynamic(() => import('@/components/chat/Chatbot'), { ssr: false });
 
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   if (loading) {
     return <LoadingScreen onComplete={() => setLoading(false)} />;
@@ -101,10 +103,13 @@ export default function HomePage() {
           transition={{ delay: 0.4, duration: 1.0, ease: 'easeOut' }}
           className="lg:col-span-5 w-full flex justify-center items-center flex-1 min-h-[200px] lg:h-[480px] lg:flex-none relative lg:mt-24"
         >
-          <CyberHead />
+          <CyberHead onRobotClick={() => setIsChatOpen(true)} />
         </motion.div>
       </div>
       </div>
+
+      {/* Global AI Chatbot Overlay */}
+      <Chatbot isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
     </main>
   );
 }

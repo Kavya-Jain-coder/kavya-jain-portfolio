@@ -5,7 +5,11 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 
-export default function CyberHead() {
+interface CyberHeadProps {
+  onRobotClick?: () => void;
+}
+
+export default function CyberHead({ onRobotClick }: CyberHeadProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const isVisible = useRef(true);
   const [hasInteracted, setHasInteracted] = useState(false);
@@ -185,15 +189,25 @@ export default function CyberHead() {
   return (
     <div 
       ref={containerRef} 
-      className="w-full h-full min-h-[400px] md:min-h-[600px] cursor-crosshair flex items-center justify-center relative"
+      className="w-full h-full min-h-[400px] md:min-h-[600px] cursor-crosshair flex items-center justify-center relative group"
       onTouchStart={() => setHasInteracted(true)}
       onMouseDown={() => setHasInteracted(true)}
+      onDoubleClick={onRobotClick}
     >
-      {!hasInteracted && (
-        <div className="absolute lg:hidden bottom-4 md:bottom-10 flex flex-col items-center animate-bounce pointer-events-none z-10 bg-base-dark/60 px-5 py-2 rounded-full border border-neon-cyan/40 backdrop-blur-md shadow-[0_0_15px_rgba(0,245,255,0.2)]">
-          <span className="text-neon-cyan font-orbitron text-xs tracking-widest uppercase">Tap & Drag</span>
+      {/* Speech Bubble */}
+      <div 
+        onClick={(e) => { 
+          e.stopPropagation(); 
+          onRobotClick?.(); 
+        }}
+        className="absolute top-[15%] md:top-[25%] right-4 md:right-12 z-20 animate-bounce cursor-pointer group-hover:scale-105 transition-transform"
+      >
+        <div className="bg-base-dark/95 px-4 py-3 md:px-6 md:py-4 rounded-2xl rounded-bl-sm border border-neon-cyan/80 shadow-[0_0_20px_rgba(0,245,255,0.3)] hover:bg-base-dark hover:shadow-[0_0_30px_rgba(0,245,255,0.5)] transition-all">
+          <span className="text-neon-cyan font-orbitron font-bold text-xs md:text-sm tracking-widest whitespace-nowrap">
+            ASK ME ABOUT KAVYA!
+          </span>
         </div>
-      )}
+      </div>
     </div>
   );
 }
