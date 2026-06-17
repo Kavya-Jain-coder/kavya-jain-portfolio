@@ -58,7 +58,7 @@ export default function HomePage() {
             <TypewriterText
               words={[
                 'GenAI Engineer',
-                'RAG Pipeline Architect',
+                'AI Software Engineer',
                 'Full-Stack Builder',
                 'B.Tech AI Student',
               ]}

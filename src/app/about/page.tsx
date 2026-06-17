@@ -47,7 +47,7 @@ export default function AboutPage() {
 
             <motion.div custom={2} variants={fadeInUp} className="text-sm md:text-base leading-relaxed text-text-primary/80">
               <TypewriterText
-                text="I am Kavya Jain — a GenAI-focused engineer in my first year at Newton School of Technology, Rishihood University. I build production-grade AI applications: RAG pipelines with Qdrant & LangChain, full-stack apps with Next.js & Supabase, and gamified AI experiences with Three.js. I don't just study AI — I ship it. 10+ live projects. One mission: build the future."
+                text="I am Kavya Jain — a GenAI-focused engineer in my third year at Newton School of Technology, Rishihood University. I build production-grade AI applications: RAG pipelines with Qdrant & LangChain, full-stack apps with Next.js & Supabase, and gamified AI experiences with Three.js. I don't just study AI — I ship it. 10+ live projects. One mission: build the future."
                 speed={15}
               />
             </motion.div>
@@ -58,7 +58,7 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="flex flex-wrap gap-2 pt-2"
             >
-              {['1st Year B.Tech', '10+ Live Projects', 'Jaipur, India'].map((tag) => (
+              {['3rd Year B.Tech', '10+ Live Projects', 'Jaipur, India'].map((tag) => (
                 <GlassCard key={tag} className="px-4 py-1.5 border border-white/5">
                   <span className="font-orbitron text-[9px] tracking-wider text-neon-cyan">
                     {tag}

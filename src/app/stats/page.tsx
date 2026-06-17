@@ -46,10 +46,10 @@ export default function StatsPage() {
               variants={fadeInUp}
               className="grid grid-cols-2 gap-3"
             >
-              <StatCounter value={1370} label="Codeforces Rating" className="border border-white/5" />
-              <StatCounter value={1394} label="LeetCode Contest Rating" className="border border-white/5" />
               <StatCounter value={170} suffix="+" label="LeetCode Solved" className="border border-white/5" />
               <StatCounter value={7.65} suffix="" label="GPA / 10.0" decimals={2} className="border border-white/5" />
+              <StatCounter value={10} suffix="+" label="Live Projects" className="border border-white/5" />
+              <StatCounter value={1} suffix="" label="Hacktoberfest Supercontributor" className="border border-white/5" />
             </motion.div>
 
             {/* scrolling ticker */}

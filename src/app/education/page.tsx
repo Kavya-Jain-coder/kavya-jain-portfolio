@@ -10,7 +10,7 @@ const timelineEntries = [
     title: 'B.Tech — Artificial Intelligence & Machine Learning Engineering',
     institution: 'Newton School of Technology, Rishihood University',
     grade: 'GPA: 7.65 / 10.0',
-    description: 'Currently building production AI systems in Year 1',
+    description: 'Currently building production AI systems in Year 3',
     icon: '🎓',
   },
   {
