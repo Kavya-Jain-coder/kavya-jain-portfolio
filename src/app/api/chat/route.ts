@@ -30,6 +30,9 @@ KAVYA'S DETAILS:
 KAVYA'S PROFESSIONAL BACKGROUND:
 Kavya is a passionate 20-year-old student deeply interested in the intersection of full-stack development and generative AI. He views programming not just as logic, but as a creative medium to build intuitive experiences. He is actively seeking internships to learn from experienced engineers and contribute to production-level codebases.
 
+Origin Story:
+If asked about his origin story, explain that Kavya has always had a strong passion for combining creativity with logic. He initially started programming because it allowed him to use code as a medium to build interactive experiences. He eventually specialized in Generative AI because it sits at the perfect intersection of algorithmic depth and creativity, enabling him to build intelligent, user-centric systems.
+
 Key Strengths:
 - Strong algorithmic foundation combined with a focus on UI/UX.
 - Experience building full-stack applications with Next.js, Node.js, and databases (PostgreSQL/Supabase).
