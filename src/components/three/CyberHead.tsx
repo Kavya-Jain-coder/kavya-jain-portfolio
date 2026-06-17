@@ -68,25 +68,26 @@ export default function CyberHead() {
           // Instead of replacing the material completely, just ensure it looks good if it has its own.
           // Or if it's missing materials, we can give it a fallback.
           if (Array.isArray(mesh.material)) {
-            mesh.material.forEach((mat: THREE.MeshStandardMaterial) => {
-              if (mat.name && mat.name.toLowerCase().includes('eye')) {
-                mat.emissive = new THREE.Color(0x00f5ff);
-                mat.emissiveIntensity = 2;
-                mat.emissiveMap = eyesTexture;
+            mesh.material.forEach((mat) => {
+              const m = mat as THREE.MeshStandardMaterial;
+              if (m.name && m.name.toLowerCase().includes('eye')) {
+                m.emissive = new THREE.Color(0x00f5ff);
+                m.emissiveIntensity = 2;
+                m.emissiveMap = eyesTexture;
               } else {
-                mat.metalness = Math.max(mat.metalness || 0, 0.6);
-                mat.roughness = Math.min(mat.roughness || 1, 0.4);
+                m.metalness = Math.max(m.metalness || 0, 0.6);
+                m.roughness = Math.min(m.roughness || 1, 0.4);
               }
             });
           } else if (mesh.material) {
-            const mat = mesh.material as THREE.MeshStandardMaterial;
-            if (mat.name && mat.name.toLowerCase().includes('eye')) {
-              mat.emissive = new THREE.Color(0x00f5ff);
-              mat.emissiveIntensity = 2;
-              mat.emissiveMap = eyesTexture;
+            const m = mesh.material as THREE.MeshStandardMaterial;
+            if (m.name && m.name.toLowerCase().includes('eye')) {
+              m.emissive = new THREE.Color(0x00f5ff);
+              m.emissiveIntensity = 2;
+              m.emissiveMap = eyesTexture;
             } else {
-              mat.metalness = Math.max(mat.metalness || 0, 0.6);
-              mat.roughness = Math.min(mat.roughness || 1, 0.4);
+              m.metalness = Math.max(m.metalness || 0, 0.6);
+              m.roughness = Math.min(m.roughness || 1, 0.4);
             }
           }
         }
