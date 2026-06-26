@@ -19,7 +19,7 @@ const projects = [
       'Interactive 3D dashboard with Three.js',
     ],
     githubUrl: 'https://github.com/Kavya-Jain-coder/Cadenza.git',
-    liveUrl: '#',
+    liveUrl: 'https://cadenza-sigma.vercel.app',
   },
   {
     title: 'NEXUS.GG',
