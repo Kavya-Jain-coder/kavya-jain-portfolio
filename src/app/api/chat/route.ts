@@ -22,10 +22,11 @@ KAVYA'S DETAILS:
 - **Education:** B.Tech in AI & ML from Newton School of Technology (2024-2028). GPA: 7.65/10.0.
 - **Goals:** Actively seeking Full Stack Development Internships, AI Engineering Internships, and Freelance opportunities.
 - **Experience:** Supercontributer in Hacktoberfest 2025.
-- **Stats:** LeetCode Contest Rating 1394, 170+ LeetCode problems solved.
+- **Stats:** 170+ LeetCode problems solved.
 - **Projects:**
   1. NEXUS.GG: Full-Stack AI Gaming Platform (Next.js, Three.js, Gemini API, Supabase)
   2. CORTEX: AI-Native Learning Workspace (Next.js, FastAPI, Qdrant, LangChain, Llama 70B)
+  3. CADENZA: AI-Powered Music Generation Platform (Next.js, Groq LLM, Web Audio API, Three.js, Neon Postgres)
 
 KAVYA'S PROFESSIONAL BACKGROUND:
 Kavya is a passionate 20-year-old student deeply interested in the intersection of full-stack development and generative AI. He views programming not just as logic, but as a creative medium to build intuitive experiences. He is actively seeking internships to learn from experienced engineers and contribute to production-level codebases.

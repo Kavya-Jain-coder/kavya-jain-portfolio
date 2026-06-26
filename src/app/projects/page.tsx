@@ -6,6 +6,22 @@ import NeonButton from '@/components/ui/NeonButton';
 
 const projects = [
   {
+    title: 'Cadenza',
+    date: 'June 2026',
+    type: 'AI-Powered Music Generation Platform',
+    description:
+      'The ultimate scrollytelling web application utilizing advanced LLMs and procedural algorithms for end-to-end music production, lyrics generation, and mastering.',
+    techStack: ['Next.js', 'Groq API', 'Three.js', 'Web Audio API', 'Tailwind CSS', 'Framer Motion', 'Neon Postgres'],
+    highlights: [
+      'Procedural beat and instrumental stem generation',
+      'Ultra-fast lyrics generation using Groq LLMs',
+      'In-browser vocal recording and AI Vocoder',
+      'Interactive 3D dashboard with Three.js',
+    ],
+    githubUrl: 'https://github.com/Kavya-Jain-coder/Cadenza.git',
+    liveUrl: '#',
+  },
+  {
     title: 'NEXUS.GG',
     date: 'Jan 2026 - May 2026',
     type: 'Full-Stack AI Gaming Platform',
