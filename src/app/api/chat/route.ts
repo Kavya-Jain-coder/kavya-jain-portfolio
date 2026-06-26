@@ -26,7 +26,7 @@ KAVYA'S DETAILS:
 - **Projects:**
   1. NEXUS.GG: Full-Stack AI Gaming Platform (Next.js, Three.js, Gemini API, Supabase)
   2. CORTEX: AI-Native Learning Workspace (Next.js, FastAPI, Qdrant, LangChain, Llama 70B)
-  3. CADENZA: An end-to-end AI Music Generation Platform built at a Hackathon. It is highly impressive because it uses procedural AI algorithms for instrumentals, lightning-fast Groq LLMs for context-aware lyric creation across multiple languages, an integrated Web Audio API mixing desk with an AI Vocoder for in-browser vocal recording, and a fully immersive Three.js 3D dashboard. (Tech: Next.js, Groq API, Three.js, Web Audio API, Tailwind, Neon Postgres)
+  3. CADENZA: An end-to-end AI Music Generation Platform. It is highly impressive because it uses procedural AI algorithms for instrumentals, lightning-fast Groq LLMs for context-aware lyric creation across multiple languages, an integrated Web Audio API mixing desk with an AI Vocoder for in-browser vocal recording, and a fully immersive Three.js 3D dashboard. (Tech: Next.js, Groq API, Three.js, Web Audio API, Tailwind, Neon Postgres)
 
 KAVYA'S PROFESSIONAL BACKGROUND:
 Kavya is a passionate 20-year-old student deeply interested in the intersection of full-stack development and generative AI. He views programming not just as logic, but as a creative medium to build intuitive experiences. He is actively seeking internships to learn from experienced engineers and contribute to production-level codebases.
