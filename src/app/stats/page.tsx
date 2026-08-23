@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import GlassCard from '@/components/ui/GlassCard';
 import StatCounter from '@/components/ui/StatCounter';
 import NeonButton from '@/components/ui/NeonButton';
+import CinematicBg from '@/components/ui/CinematicBg';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -17,11 +18,8 @@ const fadeInUp = {
 export default function StatsPage() {
   return (
     <main className="h-[100dvh] relative overflow-hidden bg-base-dark flex flex-col">
-      {/* Background Image */}
-      <div
-        className="scene-bg"
-        style={{ backgroundImage: 'url(/bg/stats.webp)' }}
-      />
+      {/* Cinematic Background */}
+      <CinematicBg palette="cyan-orange" />
 
       {/* Internal Scrolling Container */}
       <div className="flex-1 overflow-y-auto custom-scrollbar w-full relative z-10 pt-24 pb-12 flex flex-col">
@@ -35,7 +33,7 @@ export default function StatsPage() {
             <motion.h2
               custom={1}
               variants={fadeInUp}
-              className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary"
+              className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary text-shadow-heading"
             >
               LIVE STATS
             </motion.h2>

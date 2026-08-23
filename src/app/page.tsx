@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import GlitchText from '@/components/ui/GlitchText';
 import TypewriterText from '@/components/ui/TypewriterText';
 import NeonButton from '@/components/ui/NeonButton';
+import CinematicBg from '@/components/ui/CinematicBg';
 
 const CyberHead = dynamic(() => import('@/components/three/CyberHead'), { ssr: false });
 const LoadingScreen = dynamic(() => import('@/components/ui/LoadingScreen'), { ssr: false });
@@ -21,11 +22,8 @@ export default function HomePage() {
 
   return (
     <main className="h-[100dvh] relative overflow-hidden bg-base-dark flex flex-col">
-      {/* Background Image Layer */}
-      <div
-        className="scene-bg"
-        style={{ backgroundImage: 'url(/bg/hero.webp)' }}
-      />
+      {/* Cinematic Background */}
+      <CinematicBg palette="cyan-purple" />
 
       {/* Internal Non-Scrolling Container */}
       <div className="flex-1 overflow-hidden w-full relative z-10 pt-16 lg:pt-0 flex flex-col">
@@ -43,7 +41,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="font-orbitron font-black text-text-primary"
+            className="font-orbitron font-black text-text-primary text-shadow-heading"
             style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)', lineHeight: 1.1 }}
           >
             <GlitchText text="KAVYA JAIN" />
@@ -70,7 +68,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="max-w-xl p-4 md:p-6 rounded-2xl bg-base-dark/60 backdrop-blur-md border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+            className="max-w-xl p-4 md:p-6 rounded-2xl bg-base-dark/80 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
           >
             <p className="text-text-primary/90 text-sm md:text-base leading-relaxed">
               I am a B.Tech Artificial Intelligence & Machine Learning student at Newton School of Technology. 

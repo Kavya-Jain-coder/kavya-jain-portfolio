@@ -130,7 +130,7 @@ export default function Chatbot({ isOpen, onClose }: ChatbotProps) {
                     ) : (
                       <div className="prose prose-invert prose-sm max-w-none prose-p:leading-relaxed prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10 prose-ul:list-disc prose-ul:pl-4 prose-li:my-1 prose-headings:font-orbitron prose-headings:text-neon-cyan prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-headings:mt-6 prose-headings:mb-3 prose-strong:text-white prose-strong:font-bold text-text-primary/90">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                          {m.content}
+                          {m.content.replace(/<think>[\s\S]*?<\/think>/g, '').trim()}
                         </ReactMarkdown>
                       </div>
                     )}

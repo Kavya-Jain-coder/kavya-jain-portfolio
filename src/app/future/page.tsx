@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import GlassCard from '@/components/ui/GlassCard';
 import NeonButton from '@/components/ui/NeonButton';
+import CinematicBg from '@/components/ui/CinematicBg';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -29,11 +30,8 @@ const staggerItem = {
 export default function FuturePage() {
   return (
     <main className="h-[100dvh] relative overflow-hidden bg-base-dark flex flex-col pt-24 pb-6">
-      {/* Background Image */}
-      <div
-        className="scene-bg"
-        style={{ backgroundImage: 'url(/bg/future.webp)' }}
-      />
+      {/* Cinematic Background */}
+      <CinematicBg palette="purple-cyan" />
 
       <div className="w-full max-w-5xl mx-auto z-10 px-6 flex flex-col h-full overflow-hidden">
         {/* Left Side: Plans */}
@@ -45,7 +43,7 @@ export default function FuturePage() {
             <motion.h2
               custom={1}
               variants={fadeInUp}
-              className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary"
+              className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary text-shadow-heading"
             >
               WHAT I&apos;M BUILDING NEXT
             </motion.h2>

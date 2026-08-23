@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import ProjectCard from '@/components/ui/ProjectCard';
 import NeonButton from '@/components/ui/NeonButton';
+import CinematicBg from '@/components/ui/CinematicBg';
 
 const projects = [
   {
@@ -80,11 +81,8 @@ const staggerItem = {
 export default function ProjectsPage() {
   return (
     <main className="h-[100dvh] relative overflow-hidden bg-base-dark flex flex-col">
-      {/* Background Image */}
-      <div
-        className="scene-bg"
-        style={{ backgroundImage: 'url(/bg/projects.webp)' }}
-      />
+      {/* Cinematic Background */}
+      <CinematicBg palette="purple-orange" />
 
       {/* Internal Scrolling Container */}
       <div className="flex-1 overflow-y-auto custom-scrollbar w-full relative z-10 pt-24 pb-12 flex flex-col">
@@ -98,7 +96,7 @@ export default function ProjectsPage() {
             <motion.h2
               custom={1}
               variants={fadeInUp}
-              className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary"
+              className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary text-shadow-heading"
             >
               WHAT I&apos;VE BUILT
             </motion.h2>

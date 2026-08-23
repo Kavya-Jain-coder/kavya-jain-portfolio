@@ -61,16 +61,17 @@ export async function POST(req: Request) {
     const { messages } = await req.json();
 
     const result = await streamText({
-      model: groq('llama-3.3-70b-versatile'), // Incredibly fast inference for maximum UX
+      model: groq('openai/gpt-oss-20b'),
       system: SYSTEM_PROMPT,
       messages,
-      temperature: 0.2, // Low temp for highly factual and consistent responses
+      temperature: 0.2,
     });
 
     return result.toDataStreamResponse();
-  } catch (error) {
-    console.error('Chat API Error:', error);
-    return new Response(JSON.stringify({ error: 'Internal Server Error' }), { 
+  } catch (error: unknown) {
+    const err = error as Error;
+    console.error('Chat API Error:', err.message);
+    return new Response(JSON.stringify({ error: 'Internal Server Error', details: err.message }), { 
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });

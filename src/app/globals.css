@@ -14,9 +14,9 @@
   --plasma-orange: #ff6b35;
   --base-dark: #0a0a0f;
   --text-primary: #e0e0ff;
-  --glass-bg: rgba(255, 255, 255, 0.04);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-blur: 6px;
+  --glass-bg: rgba(10, 10, 18, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --glass-blur: 16px;
 }
 
 * {
@@ -73,10 +73,10 @@ body {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(10, 10, 15, 0.2) 0%,
-    rgba(10, 10, 15, 0.1) 40%,
-    rgba(10, 10, 15, 0.15) 70%,
-    rgba(10, 10, 15, 0.6) 100%
+    rgba(10, 10, 15, 0.55) 0%,
+    rgba(10, 10, 15, 0.60) 30%,
+    rgba(10, 10, 15, 0.65) 60%,
+    rgba(10, 10, 15, 0.85) 100%
   );
   z-index: 1;
 }
@@ -96,6 +96,21 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: clamp(1rem, 5vw, 4rem);
+}
+
+/* ═══════════════════════════════════════════════════════
+   TEXT LEGIBILITY HELPERS
+   ═══════════════════════════════════════════════════════ */
+
+.text-shadow-heading {
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-body {
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -388,3 +403,4 @@ body {
   0%, 100% { opacity: 0.4; transform: translateY(0); }
   50% { opacity: 1; transform: translateY(8px); }
 }
+
