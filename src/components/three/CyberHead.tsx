@@ -199,9 +199,10 @@ export default function CyberHead({ onRobotClick }: CyberHeadProps) {
         }}
         className="absolute top-[15%] md:top-[25%] right-4 md:right-12 z-20 animate-bounce cursor-pointer group-hover:scale-105 transition-transform"
       >
-        <div className="bg-base-dark/95 px-4 py-3 md:px-6 md:py-4 rounded-2xl rounded-bl-sm border border-neon-cyan/80 shadow-[0_0_20px_rgba(0,245,255,0.3)] hover:bg-base-dark hover:shadow-[0_0_30px_rgba(0,245,255,0.5)] transition-all">
+        <div className="bg-base-dark/95 px-4 py-3 md:px-6 md:py-4 rounded-2xl rounded-bl-sm border border-neon-cyan/80 shadow-[0_0_20px_rgba(0,245,255,0.3)] hover:bg-base-dark hover:shadow-[0_0_30px_rgba(0,245,255,0.5)] transition-all flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-neon-cyan animate-ping" />
           <span className="text-neon-cyan font-orbitron font-bold text-xs md:text-sm tracking-widest whitespace-nowrap">
-            ASK ME ABOUT KAVYA!
+            ASK ME: QC & GENAI!
           </span>
         </div>
       </div>

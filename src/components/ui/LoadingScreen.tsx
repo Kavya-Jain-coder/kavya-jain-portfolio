@@ -7,7 +7,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
   const canvasRef = useRef<HTMLDivElement>(null);
   const [text, setText] = useState('');
   const [fadeOut, setFadeOut] = useState(false);
-  const fullText = 'INITIALIZING KAVYA\'S WORLD...';
+  const fullText = "INITIALIZING QUANTUM & AI SYSTEMS...";
 
   useEffect(() => {
     let i = 0;

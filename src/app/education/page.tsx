@@ -8,17 +8,42 @@ import CinematicBg from '@/components/ui/CinematicBg';
 const timelineEntries = [
   {
     period: '2024 → 2028',
-    title: 'B.Tech — Artificial Intelligence & Machine Learning Engineering',
+    title: 'Bachelor of Technology (B.Tech) — AI & ML',
     institution: 'Newton School of Technology, Rishihood University',
-    grade: 'GPA: 7.65 / 10.0',
-    description: 'Currently building production AI systems in Year 3',
+    grade: 'CGPA: 7.02 / 10.0',
+    description:
+      'Pursuing specialized coursework in Artificial Intelligence, Machine Learning, Data Structures & Algorithms, Quantum Computing, and Distributed Systems. Actively researching hybrid quantum algorithms and generative architectures.',
     icon: '🎓',
   },
   {
-    period: 'Extra-curricular',
+    period: '2023 → 2024',
+    title: 'Senior Secondary / Intermediate (Class XII)',
+    institution: "Kid's Valley School",
+    grade: 'Score: 75.6%',
+    description: 'Focused on Physics, Mathematics, Chemistry, and Computer Science foundations.',
+    icon: '📚',
+  },
+  {
+    period: '2021 → 2022',
+    title: 'Secondary School Matriculation (Class X)',
+    institution: "Kid's Valley School",
+    grade: 'Score: 88.0%',
+    description: 'High academic distinction with strong quantitative aptitude.',
+    icon: '🏫',
+  },
+  {
+    period: 'October 2026',
+    title: 'Quantum Research & Simulation Experience',
+    institution: 'IBM Qiskit Fall Fest 2026 & Independent Research',
+    description:
+      'Hands-on Qiskit experience from engineering and validating a hybrid quantum-classical simulator with 4-qubit entangled clusters and Mermin-GHZ non-locality games under depolarizing noise.',
+    icon: '⚛️',
+  },
+  {
+    period: 'Athletics & Leadership',
     title: 'Inter-School Kho-Kho Championship, Jaipur',
-    institution: '🏅 3rd Place',
-    description: 'Teamwork, discipline, competitive spirit',
+    institution: 'District / Inter-School Sports Representation',
+    description: 'Represented school in competitive Kho-Kho tournaments, cultivating tactical coordination, discipline, and endurance.',
     icon: '🏆',
   },
 ];
@@ -41,35 +66,33 @@ export default function EducationPage() {
       {/* Internal Scrolling Container */}
       <div className="flex-1 overflow-y-auto custom-scrollbar w-full relative z-10 pt-24 pb-12 flex flex-col">
         <div className="w-full max-w-5xl mx-auto px-6 flex-1 flex flex-col justify-center items-center">
-        {/* Left Side: Timeline */}
-        <div className="w-full space-y-8">
-          <motion.div initial="hidden" animate="visible" className="space-y-4">
-            <motion.p custom={0} variants={fadeInUp} className="section-eyebrow">
-              {'// MY JOURNEY'}
-            </motion.p>
-            <motion.h2
-              custom={1}
-              variants={fadeInUp}
-              className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary text-shadow-heading"
-            >
-              BEYOND EARTH
-            </motion.h2>
+          <div className="w-full space-y-6">
+            <motion.div initial="hidden" animate="visible" className="space-y-4">
+              <motion.p custom={0} variants={fadeInUp} className="section-eyebrow">
+                {'// ACADEMIC & ATHLETIC MILESTONES'}
+              </motion.p>
+              <motion.h2
+                custom={1}
+                variants={fadeInUp}
+                className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary text-shadow-heading"
+              >
+                MY JOURNEY
+              </motion.h2>
 
-            <motion.div
-              custom={2}
-              variants={fadeInUp}
-              className="pr-2"
-            >
-              <Timeline entries={timelineEntries} />
-            </motion.div>
+              <motion.div custom={2} variants={fadeInUp} className="pr-2">
+                <Timeline entries={timelineEntries} />
+              </motion.div>
 
-            <motion.div custom={3} variants={fadeInUp} className="pt-2 flex gap-4">
-              <NeonButton href="/certifications" variant="cyan">
-                VIEW CERTIFICATIONS →
-              </NeonButton>
+              <motion.div custom={3} variants={fadeInUp} className="pt-2 flex flex-wrap gap-4">
+                <NeonButton href="/certifications" variant="cyan">
+                  VIEW CERTIFICATIONS →
+                </NeonButton>
+                <NeonButton href="/projects" variant="purple">
+                  VIEW PROJECTS →
+                </NeonButton>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        </div>
+          </div>
         </div>
       </div>
     </main>

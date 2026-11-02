@@ -61,10 +61,15 @@ export default function Chatbot({ isOpen, onClose }: ChatbotProps) {
                   <Bot className="w-5 h-5 text-neon-cyan" />
                 </div>
                 <div>
-                  <h3 className="font-orbitron font-bold text-text-primary tracking-wide text-sm">KAVYA_AI</h3>
+                  <h3 className="font-orbitron font-bold text-text-primary tracking-wide text-sm flex items-center gap-1.5">
+                    <span>KAVYA_AI</span>
+                    <span className="text-[9px] px-1.5 py-0.2 rounded bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan font-mono">
+                      QC × AI
+                    </span>
+                  </h3>
                   <div className="flex items-center gap-1.5">
                     <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                    <span className="text-[10px] text-text-primary/60 uppercase tracking-wider">Online</span>
+                    <span className="text-[10px] text-text-primary/60 uppercase tracking-wider">Online & Quantum-Trained</span>
                   </div>
                 </div>
               </div>
@@ -84,16 +89,16 @@ export default function Chatbot({ isOpen, onClose }: ChatbotProps) {
                   <p className="font-orbitron text-sm tracking-wide text-neon-cyan">
                     INITIALIZING CONNECTION...
                   </p>
-                  <p className="text-xs text-text-primary/70 max-w-[250px] mb-4">
-                    Ask me anything about Kavya&apos;s projects, skills, or experience.
+                  <p className="text-xs text-text-primary/70 max-w-[280px] mb-4">
+                    Ask me about Kavya&apos;s Quantum Computing research, Qiskit simulations, or GenAI projects.
                   </p>
                   
-                  <div className="flex flex-col gap-2 w-full max-w-[260px] pt-4">
+                  <div className="flex flex-col gap-2 w-full max-w-[280px] pt-4">
                     {[
-                      "What is your origin story?",
-                      "Why should we hire Kavya?",
-                      "What is your tech stack?",
-                      "Tell me about CORTEX."
+                      "Tell me about the Mermin-GHZ Quantum project",
+                      "How does the Quantum Infection Simulator work?",
+                      "What are Kavya's Quantum & AI skills?",
+                      "Tell me about Cadenza (AI Music platform)"
                     ].map((q) => (
                       <button
                         key={q}

@@ -25,8 +25,8 @@ const socialLinks = [
 
 const quickInfo = [
   { icon: <MapPin size={14} />, label: 'Jaipur, India' },
-  { icon: <GraduationCap size={14} />, label: 'B.Tech AI & ML — NST' },
-  { icon: <Sparkles size={14} />, label: 'Open to Internships' },
+  { icon: <GraduationCap size={14} />, label: 'B.Tech AI & ML (Rishihood)' },
+  { icon: <Sparkles size={14} />, label: 'QC & GenAI Internships' },
 ];
 
 export default function ContactPage() {
@@ -77,7 +77,7 @@ export default function ContactPage() {
               LET&apos;S BUILD THE FUTURE
             </motion.h2>
             <motion.p custom={2} variants={fadeInUp} className="text-text-primary/50 text-sm mb-8">
-              Open to internships, collaborations, and AI engineering projects.
+              Open to internships, quantum computing research collaborations, and AI engineering projects.
             </motion.p>
 
             {/* Two-Column Grid */}

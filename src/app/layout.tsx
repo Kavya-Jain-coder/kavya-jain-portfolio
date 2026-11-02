@@ -2,31 +2,36 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kavya Jain — GenAI Engineer & Full-Stack Builder",
+  title: "Kavya Jain — Quantum Computing & GenAI Engineer",
   description:
-    "Cinematic portfolio of Kavya Jain — GenAI Engineer, RAG Pipeline Architect, and Full-Stack Builder. B.Tech AI & ML at Newton School of Technology. Explore projects in AI, LangChain, Three.js, and more.",
+    "Portfolio of Kavya Jain — Quantum Computing Researcher, GenAI Engineer, and Full-Stack Builder. B.Tech in AI & ML at Newton School of Technology (Rishihood University). Exploring Qiskit Aer, Mermin-GHZ non-locality, RAG architectures, and 3D web telemetry.",
   keywords: [
     "Kavya Jain",
+    "Quantum Computing",
+    "Qiskit",
+    "Qiskit Aer",
+    "Mermin-GHZ",
+    "Quantum Algorithms",
     "GenAI Engineer",
     "RAG Pipeline",
     "LangChain",
     "Full Stack Developer",
-    "AI Portfolio",
     "Newton School of Technology",
+    "Rishihood University",
     "Three.js",
     "Next.js",
   ],
   authors: [{ name: "Kavya Jain" }],
   openGraph: {
-    title: "Kavya Jain — GenAI Engineer & Full-Stack Builder",
+    title: "Kavya Jain — Quantum Computing & GenAI Engineer",
     description:
-      "Enter the world of AI through an immersive cinematic portfolio experience.",
+      "Bridging Quantum Simulation, Non-Local Entanglement, and Generative AI through an interactive cinematic experience.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kavya Jain — GenAI Engineer & Full-Stack Builder",
-    description: "Enter the world of AI through an immersive cinematic portfolio experience.",
+    title: "Kavya Jain — Quantum Computing & GenAI Engineer",
+    description: "Bridging Quantum Simulation, Non-Local Entanglement, and Generative AI through an interactive cinematic experience.",
   },
 };
 

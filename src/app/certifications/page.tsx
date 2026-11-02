@@ -23,50 +23,68 @@ export default function CertificationsPage() {
       {/* Internal Scrolling Container */}
       <div className="flex-1 overflow-y-auto custom-scrollbar w-full relative z-10 pt-24 pb-12 flex flex-col">
         <div className="w-full max-w-5xl mx-auto px-6 flex-1 flex flex-col justify-center items-center">
-          {/* Left Side: Badges */}
-        <div className="w-full space-y-8">
-          <motion.div initial="hidden" animate="visible" className="space-y-4">
-            <motion.p custom={0} variants={fadeInUp} className="section-eyebrow">
-              {'// CERTIFICATIONS'}
-            </motion.p>
-            <motion.h2
-              custom={1}
-              variants={fadeInUp}
-              className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary text-shadow-heading"
-            >
-              THE CORE ENGINE
-            </motion.h2>
+          <div className="w-full space-y-6">
+            <motion.div initial="hidden" animate="visible" className="space-y-4">
+              <motion.p custom={0} variants={fadeInUp} className="section-eyebrow">
+                {'// CREDENTIALS & WORKSHOPS'}
+              </motion.p>
+              <motion.h2
+                custom={1}
+                variants={fadeInUp}
+                className="font-orbitron text-2xl md:text-4xl font-bold text-text-primary text-shadow-heading"
+              >
+                CERTIFICATIONS
+              </motion.h2>
 
-            <motion.div
-              custom={2}
-              variants={fadeInUp}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-            >
-              <CertBadge
-                title="GDG UI/UX Workshop"
-                issuer="Google Developers Group, Rishihood University"
-                date="February 2025"
-                skills={['User-centered design', 'Accessibility', 'Intuitive interfaces', 'Visual design']}
-                gradient="#4285F4, #00f5ff"
-                icon="G"
-              />
-              <CertBadge
-                title="Mastering Excel"
-                issuer="SkillEcted"
-                date="November 2024"
-                skills={['Data organisation', 'Charts', 'Formulas', 'Statistical analysis', 'Pivot tables']}
-                gradient="#ff6b35, #fff200"
-                icon="📊"
-              />
-            </motion.div>
+              <motion.div
+                custom={2}
+                variants={fadeInUp}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              >
+                <CertBadge
+                  title="IBM Qiskit Fall Fest 2026"
+                  issuer="IBM Quantum & Community"
+                  date="October 2026"
+                  skills={['Qiskit SDK', 'Quantum Circuits', 'Mermin-GHZ Game', 'Aer Noise Simulation', 'Pytest QA']}
+                  gradient="#00f5ff, #bf00ff"
+                  icon="⚛️"
+                />
+                <CertBadge
+                  title="GDG UI/UX Workshop"
+                  issuer="Google Developers Group, Rishihood University"
+                  date="February 2025"
+                  skills={['User-centered design', 'Accessibility', 'Intuitive interfaces', 'Visual design']}
+                  gradient="#4285F4, #00f5ff"
+                  icon="G"
+                />
+                <CertBadge
+                  title="Mastering Excel"
+                  issuer="SkillEcted"
+                  date="November 2024"
+                  skills={['Data organisation', 'Charts & Formulas', 'Statistical analysis', 'Pivot tables']}
+                  gradient="#ff6b35, #fff200"
+                  icon="📊"
+                />
+                <CertBadge
+                  title="Hacktoberfest Contributor"
+                  issuer="DigitalOcean & Open Source Community"
+                  date="October 2025"
+                  skills={['Open Source Git', 'Pull Requests', 'Collaborative Development', 'CI/CD']}
+                  gradient="#bf00ff, #ff6b35"
+                  icon="🐙"
+                />
+              </motion.div>
 
-            <motion.div custom={3} variants={fadeInUp} className="pt-2 flex gap-4">
-              <NeonButton href="/future" variant="cyan">
-                VIEW FUTURE PLANS →
-              </NeonButton>
+              <motion.div custom={3} variants={fadeInUp} className="pt-2 flex flex-wrap gap-4">
+                <NeonButton href="/future" variant="cyan">
+                  VIEW FUTURE PLANS →
+                </NeonButton>
+                <NeonButton href="/stats" variant="purple">
+                  VIEW LIVE STATS →
+                </NeonButton>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        </div>
+          </div>
         </div>
       </div>
     </main>

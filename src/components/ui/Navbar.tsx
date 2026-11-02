@@ -28,20 +28,25 @@ export default function Navbar() {
         <Link
           href="/"
           aria-label="Homepage"
-          className="group flex items-center gap-2 font-orbitron font-black tracking-widest text-text-primary transition-colors"
+          className="group flex items-center gap-2.5 font-orbitron font-black tracking-widest text-text-primary transition-colors"
         >
           <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-white/5 border border-white/10 group-hover:border-neon-cyan/50 group-hover:shadow-[0_0_15px_rgba(0,245,255,0.4)] transition-all duration-300">
+            {/* Quantum Superposition & AI Glyph */}
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-neon-cyan group-hover:animate-pulse">
-              <path d="M12 2L22 7.77317V16.2268L12 22L2 16.2268V7.77317L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M12 7V17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M7 10L17 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M17 10L7 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5" fill="rgba(0,245,255,0.2)"/>
+              <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="currentColor" strokeWidth="1.2" transform="rotate(-30 12 12)" strokeDasharray="1 1"/>
+              <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#bf00ff" strokeWidth="1.2" transform="rotate(30 12 12)"/>
             </svg>
             <div className="absolute inset-0 rounded-lg bg-neon-purple/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          <span className="hidden sm:block text-sm group-hover:text-neon-cyan transition-colors">
-            KAVYA<span className="text-neon-purple">.AI</span>
-          </span>
+          <div className="hidden sm:flex items-center gap-1.5 text-xs md:text-sm font-orbitron">
+            <span className="font-extrabold text-white tracking-wider group-hover:text-neon-cyan transition-colors">KAVYA</span>
+            <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/5 border border-white/10 tracking-widest font-mono">
+              <span className="text-neon-cyan font-bold">QC</span>
+              <span className="text-white/40 mx-0.5">×</span>
+              <span className="text-neon-purple font-bold">AI</span>
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
